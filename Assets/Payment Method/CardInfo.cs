@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class CardInfo : MonoBehaviour
+public class CardInfo
 {
     private string name;
     private string Month;

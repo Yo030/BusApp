@@ -9,11 +9,11 @@ using UnityEngine.UI;
 public class SaveInfo : MonoBehaviour
 {
     private string name;
-    private string date;
+    private string month;
+    private string year; 
     private string number;
     private string security;
-
-    private int[] Cards;
+    
     private double[] numberCard = new double[16];
     private int validCard;
 
@@ -56,24 +56,36 @@ public class SaveInfo : MonoBehaviour
                     }
                     
                 }
-                Debug.Log(numberCard[i]);
+                //Debug.Log(numberCard[i]);
                 validCard += Convert.ToInt32(numberCard[i]);
                 
             }
-            Debug.Log("Valid Card: " + validCard);
+            //Debug.Log("Valid Card: " + validCard);
 
         }
         else
         {
             Debug.Log("numero no valido");
         }
-        //for (int i = 0; i < cardNumbers.Length; i++)
-        //{
 
-        //}
+        Debug.Log(validCard);
+        number = NumberField.text;
+        name = NameField.text;
+        month = MonthField.text;
+        year = YearField.text;
+        security = SecurityField.text;
 
-        ////CardInfo card = new CardInfo(NameField.text, DateField.text, NumberField.text, SecurityField.text);
-        //BinaryFormatter bf = new BinaryFormatter();
-        //FileStream file = File.Create(Application.persistentDataPath + "CardInfo")
+        if (validCard == 70 && name != "" && month != "" && year != "" && security != "")
+        {
+            CardInfo card = new CardInfo(name, month, year, number, security);
+            BinaryFormatter bf = new BinaryFormatter();
+            Debug.Log(Application.persistentDataPath);
+            FileStream file = File.Create(Application.persistentDataPath + "/CardInfo.txt");
+            bf.Serialize(file, card);
+            file.Close();
+            
+        }
+
+        validCard = 0;
     }
 }

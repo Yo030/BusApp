@@ -56,11 +56,11 @@ public class SaveInfo : MonoBehaviour
                     }
                     
                 }
-                //Debug.Log(numberCard[i]);
+                Debug.Log(numberCard[i]);
                 validCard += Convert.ToInt32(numberCard[i]);
                 
             }
-            //Debug.Log("Valid Card: " + validCard);
+            Debug.Log("Valid Card: " + validCard);
 
         }
         else
@@ -75,7 +75,7 @@ public class SaveInfo : MonoBehaviour
         year = YearField.text;
         security = SecurityField.text;
 
-        if (validCard == 70 && name != "" && month != "" && year != "" && security != "")
+        if ((validCard == 70 || validCard == 80 || validCard == 90 || validCard == 100 || validCard == 60) && name != "" && month != "" && year != "" && security != "")
         {
             CardInfo card = new CardInfo(name, month, year, number, security);
             BinaryFormatter bf = new BinaryFormatter();

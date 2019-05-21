@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class TiempoDeEsperaParaRecarga : MonoBehaviour
 {
-
+    /*
     public float TiemDeEspera;
     public float TiemDeEsperaDesDeVibrar;
     public GameObject Parte5;
+    */
 
+    void Start()
+    {
+
+        Handheld.Vibrate();
+    }
+    /*
     void Update()
     {
         TiemDeEspera += TiemDeEspera * Time.deltaTime - 1;
@@ -22,6 +29,6 @@ public class TiempoDeEsperaParaRecarga : MonoBehaviour
                 Parte5.SetActive(true);
             }
         }
-    }
+    }*/
 }
 

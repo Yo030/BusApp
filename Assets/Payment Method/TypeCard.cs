@@ -21,16 +21,16 @@ public class TypeCard : MonoBehaviour
     {
         if (cardNumber.text.Length >= 6)
         {
-            Debug.Log("numero input: " + cardNumber.text.Length);
+            //Debug.Log("numero input: " + cardNumber.text.Length);
             if (cardNumber.text[0] == '4')
             {
-                Debug.Log("visa");
+                //Debug.Log("visa");
                 typeCard.sprite = visaCard;
             }
 
             if (cardNumber.text[0] == '5')
             {
-                Debug.Log("mastercard");
+                //Debug.Log("mastercard");
                 if (cardNumber.text[1] >= '1' && cardNumber.text[1] <= '5')
                 {
                     typeCard.sprite = masterCard;

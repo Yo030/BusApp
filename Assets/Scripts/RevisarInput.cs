@@ -5,22 +5,13 @@ using UnityEngine.UI;
 
 public class RevisarInput : MonoBehaviour
 {
-    [SerializeField]
-    private InputField Monto;
 
-    public Text Confirmacion;
-
-    void LimiteDeRecarga(float Tam, InputField Calificacion)
-    {
-        if (Tam >= 11)
-        {
-            Calificacion.text = "300";
-        }
-    }
+    public Text Txt_Confirmacion;
+    public InputField InputMonto;
 
     void Update()
     {
-        Confirmacion.text = "Estas segurao que quieres ingresar :" + Monto + "?";
+        Txt_Confirmacion.text = "ESTAS SEGURO DE QUE QUIERES INGRESAR: " + float.Parse(InputMonto.text) + " PESOS A TU TARJETA?";
     }
 
 }

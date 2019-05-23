@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/AR_Scanner.unity
+    guid: 807c48803907e644aa9fd97bcbadef52
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 07c76b8c7c469b9468c2bccc4a341f91
   - enabled: 1
@@ -23,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AddPaymentMethod.unity
     guid: 4b66b167f4e8a7f4985be61c4b3f59ad
+  - enabled: 1
+    path: Assets/Scenes/NewChargeCard.unity
+    guid: 74e1ef60b7dc03e498b2c33b6b1d7ae3
   m_configObjects: {}

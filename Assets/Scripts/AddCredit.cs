@@ -7,6 +7,7 @@ public class AddCredit : MonoBehaviour
 {
     public InputField field;
     private string input;
+    public Text s_saldo;
 
     void addCredit(int _addedBalance)
     {
@@ -14,12 +15,18 @@ public class AddCredit : MonoBehaviour
         {
             case 1:
                 numeroTarjeta.saldo_1 += _addedBalance;
+
+                s_saldo.text = "Tu saldo es: " + numeroTarjeta.saldo_1;
                 break;
             case 2:
                 numeroTarjeta.saldo_2 += _addedBalance;
+
+                s_saldo.text = "Tu saldo es: " + numeroTarjeta.saldo_2;
                 break;
             case 3:
                 numeroTarjeta.saldo_3 += _addedBalance;
+
+                s_saldo.text = "Tu saldo es: " + numeroTarjeta.saldo_3;
                 break;
         }
     }
@@ -29,14 +36,14 @@ public class AddCredit : MonoBehaviour
         input = field.text;
         int inputNum = 0;
         int.TryParse(input, out inputNum);
-
         addCredit(inputNum);
-        Debug.Log(inputNum+1);
     }
 
     public void debugBalance()
     {
-        Debug.Log(numeroTarjeta.saldo_1);
+        Debug.Log("t1: " + numeroTarjeta.saldo_1);
+        Debug.Log("t2: " + numeroTarjeta.saldo_2);
+        Debug.Log("t3: " + numeroTarjeta.saldo_3);
     }
 
 }

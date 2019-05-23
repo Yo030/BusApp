@@ -1,8 +1,6 @@
 {
-    "name": "VuforiaScripts",
-    "references": [
-        "mio"
-    ],
+    "name": "mio",
+    "references": [],
     "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],

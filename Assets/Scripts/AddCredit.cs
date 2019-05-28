@@ -11,7 +11,7 @@ public class AddCredit : MonoBehaviour
     private string input;
     public Text s_saldo;
 
-    void addCredit(int _addedBalance)
+    public void addCredit(int _addedBalance)
     {
         switch (numeroTarjeta.tarjeta)
         {

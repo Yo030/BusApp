@@ -10,6 +10,7 @@ public class AddCredit : MonoBehaviour
     public InputField field;
     private string input;
     public Text s_saldo;
+    public GameObject wondow;
 
     public void addCredit(int _addedBalance)
     {
@@ -49,7 +50,16 @@ public class AddCredit : MonoBehaviour
         input = field.text;
         int inputNum = 0;
         int.TryParse(input, out inputNum);
-        addCredit(inputNum);
+        if (inputNum > 300)
+        {
+            field.text = "300";
+            wondow.SetActive(true);
+        }
+        else
+        {
+            addCredit(inputNum);
+            field.text = "";
+        }
     }
 
     public void debugBalance()

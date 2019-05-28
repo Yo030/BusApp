@@ -9,4 +9,9 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneName);
     }
+
+    public void ocultar(GameObject window)
+    {
+        window.SetActive(false);
+    }
 }

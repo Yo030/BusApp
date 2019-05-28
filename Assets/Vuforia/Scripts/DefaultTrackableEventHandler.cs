@@ -65,7 +65,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             numeroTarjeta.tarjeta = NumeroDeTarjeta;
             Debug.Log(numeroTarjeta.tarjeta);
-            SceneManager.LoadScene("NewChargeCard");
+            SceneManager.LoadScene("Menu");
             OnTrackingFound();
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&

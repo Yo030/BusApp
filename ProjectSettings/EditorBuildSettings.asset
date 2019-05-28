@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewChargeCard.unity
     guid: 74e1ef60b7dc03e498b2c33b6b1d7ae3
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: e19c4e17a50e40342a47ec320a11befb
+  - enabled: 1
+    path: Assets/Scenes/RevisarSaldo.unity
+    guid: 1964b89ecec04da42b5d307ac570b1ab
   m_configObjects: {}
